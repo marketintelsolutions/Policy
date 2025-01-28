@@ -2,28 +2,36 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Pacam from "./pages/PacamData";
+import DataProtection from "./pages/DataProtection";
 import Indemnity from "./pages/Indemnity";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Pacam from "./pages/Pacam";
+import Securities from "./pages/Securities";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/data-protection",
       element: (
+        <DataProtection />
+      ),
+    },
+    {
+      path: "/pacam",
+      element: (
         <Pacam />
       ),
     },
     {
-      path: "/indemnity",
+      path: "/securities",
       element: (
-        <Indemnity />
+        <Securities />
       ),
     },
     {
-      path: "/terms-and-conditions",
+      path: "/trustees",
       element: (
-        <TermsAndConditions />
+        <Securities />
       ),
     },
 
